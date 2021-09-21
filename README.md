@@ -22,3 +22,15 @@ File akan ter-download dengan extensi csv, tampilkan pada excel dengan beberapa 
 - Perubahan menjadi tampilan tabel
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134255525-18e1b3a8-4da6-46bf-beec-e797c34455b0.png>
+
+### Buat Tabel Baru dari Dataset Utama
+
+Membuat dua tabel baru dari dataset utama, yaitu mengenai data kematian COVID-19 dan data vaksinasi COVID-19
+
+- CovidDeaths.xlsx
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134256471-4c43c718-a55b-4de4-aa91-8104a4f1de2a.png>
+
+- CovidVaccinations.xlsx
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134256531-f835053b-60eb-4efc-9005-8901719a8027.png>
