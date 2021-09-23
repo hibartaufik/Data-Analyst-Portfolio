@@ -42,3 +42,7 @@ Membuat Database dengan Microsoft SQL Server Management Studio
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134482443-05337d06-de9f-463a-89c5-38a300ddd472.png>
 
 Import CovidDeaths.xlxs dan CovidVaccinations.xlxs ke dalam database
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134498212-a8732aec-cc9a-4b5d-b868-5c572cc528be.png>
+
+
