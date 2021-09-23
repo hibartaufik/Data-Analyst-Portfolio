@@ -45,4 +45,25 @@ Import CovidDeaths.xlxs dan CovidVaccinations.xlxs ke dalam database
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134498212-a8732aec-cc9a-4b5d-b868-5c572cc528be.png>
 
+### 1.4 Data Exploration
+
+Eksplorasi data dengan SQL Query
+
+- Melihat data dari kedua tabel
+
+```
+SELECT * 
+FROM PortfolioProject.dbo.CovidDeaths
+ORDER BY 3, 4
+```
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134499458-87dd37ec-a373-47d8-88ce-4e0193fdbf42.png>
+
+```
+SELECT * 
+FROM PortfolioProject.dbo.CovidVaccinations
+ORDER BY 3, 4
+```
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134499616-6db88524-6fd3-4d8c-9c65-661df13f2c34.png>
 
