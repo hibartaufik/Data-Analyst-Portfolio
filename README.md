@@ -49,7 +49,7 @@ Import CovidDeaths.xlxs dan CovidVaccinations.xlxs ke dalam database
 
 Eksplorasi data dengan SQL Query
 
-- Melihat data dari kedua tabel
+#### 1.4.1 Melihat data dari kedua tabel
 
 ```
 SELECT * 
@@ -67,3 +67,33 @@ ORDER BY 3, 4
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134499616-6db88524-6fd3-4d8c-9c65-661df13f2c34.png>
 
+#### 1.4.2 Menampilkan Data yang Akan Digunakan
+
+Terdapat 26 field pada tabel sehingga tidak efisien jika kita menampilkan semua data termasuk data yang kurang informatif, pilih beberapa field yang dianggap penting dan lebih informatif dari field yang lainnya.
+
+- Eksplorasi Data Pada Tabel CovidDeaths
+
+Memilih field Location, date, total_cases, new_cases, total_deaths, population agar lebih informatif.
+
+```
+SELECT Location, date, total_cases, new_cases, total_deaths, population
+FROM PortfolioProject.dbo.CovidDeaths
+ORDER BY 1, 2
+```
+
+Mengurutkan berdasarkan Location dan date agar menampilkan data berdasarkan lokasi yang berisi nama negara lalu selanjutnya diurutkan berdasarkan tanggal sehingga kita lebih mudah menganalisa beberapa faktor yang berkaitan dengan rentang waktu seperti perbandingan kenaikan dan penurunan kasus tertentu.
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134501649-0b93c1f7-5a59-425a-b34c-8ba4c60aff55.png>
+
+Dalam sekilas data yang kita lihat, untuk field total_deaths berisi NULL karena pandemi merebak di berbagai tempat tidak akan langsung menimbulkan kematian. 
+
+```
+SELECT Location, date, total_cases, new_cases, total_deaths, population
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE total_deaths != 'NULL'
+ORDER BY 1, 2
+```
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134502883-df2c0b05-4808-439b-b509-3301fd6ce6b1.png>
+
+Angka kematian akan muncul beberapa waktu setelah pandemi menyebar dalam suatu lokasi. Untuk Afghanistan misalnya, angka kematian baru muncul pada 23 Maret 2020.
