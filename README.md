@@ -233,4 +233,14 @@ Hasil query di atas menunjukkan jumlah setiap angka kasus baru, angka kematian b
 
 <img width=720 src=https://user-images.githubusercontent.com/74480780/134778365-5872dcb8-a91c-4522-b270-b2f32fa62d68.png>
 
-Setiap kasus di seluruh dunia dikelompokkan dan dijumlahkan berdasarkan tanggal, sampai rentang tanggal 20 September 2021.
+Setiap kasus di seluruh dunia dikelompokkan dan dijumlahkan berdasarkan tanggal, sampai rentang tanggal 20 September 2021. Dan jika kita ingin menjumlahkan seluruh angka tersebut dari seluruh dunia maka akan didapat angka yang sangat besar.
+
+```
+SELECT SUM(new_cases) AS TotalAngkaKasus, SUM(CAST(new_deaths AS INT)) AS TotalAngkaKematian, 
+ SUM(CAST(new_deaths AS INT))/SUM(new_cases)*100 AS PresentaseKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE continent IS NOT NULL
+ORDER BY 1, 2
+```
+
+<img width=720 src=https://user-images.githubusercontent.com/74480780/134778501-ad4add20-dc3c-4e3f-800c-02e624686951.png>
