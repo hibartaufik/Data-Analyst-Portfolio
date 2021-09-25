@@ -107,4 +107,7 @@ ORDER BY 1, 2
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134760770-5920189a-d737-4493-ba47-447dd3509960.png>
 
-Dataset yang kita eksplor mencatat bahwa di Indonesia, pandemi baru menimbulkan kematian dimulai pada 11 Maret 2020.
+Dataset yang kita eksplor mencatat bahwa di Indonesia, pandemi baru menimbulkan kematian dimulai pada 11 Maret 2020. Dengan begitu banyaknya data yang tersedia pada tabel, kita hanya akan fokus pada kasus COVID-19 yang ada di Indonesia saja. Semisal kita ingin melihat angka presentase kematian akibat COVID-19 di Indonesia.
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134761677-569778e0-a9fd-4631-9701-8f58e98595e1.png>
+
