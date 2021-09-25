@@ -142,6 +142,20 @@ ORDER BY 1, 2
 
 <img width=720 src=https://user-images.githubusercontent.com/74480780/134762922-f6bad456-f8c8-4daf-90ae-693979641457.png>
 
+Dalam skala global, angka total kematian untuk Indonesia dapat kita ketahui dengan membandingkannya dengan negara-negara lain.
+
+```
+SELECT location, MAX(CAST(total_deaths AS INT)) AS TotalAngkaKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE continent IS NOT NULL
+GROUP BY location 
+ORDER BY TotalAngkaKematian DESC
+```
+
+<img width=720 src=https://user-images.githubusercontent.com/74480780/134777519-de94f2e1-8d6b-49c9-8722-2f5760fd4a91.png>
+
+Seperti yang terlihat pada hasil query di atas, Indonesia menempati peringkat ke 7 dengan total angka kematian sebesar 140.634 (per tanggal 22 September 2021).
+
 Selain melihat angka dan presentase yang berkaitan dengan kematian, kita akan melihat angka total_cases per populasi untuk melihat seberapa persen orang-orang yang terinfeksi berdasarkan populasi lokasi terkait.
 
 ```
