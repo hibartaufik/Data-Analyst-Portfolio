@@ -109,6 +109,13 @@ ORDER BY 1, 2
 
 Dataset yang kita eksplor mencatat bahwa di Indonesia, pandemi baru menimbulkan kematian dimulai pada 11 Maret 2020. Dengan begitu banyaknya data yang tersedia pada tabel, kita hanya akan fokus pada kasus COVID-19 yang ada di Indonesia saja. Semisal kita ingin melihat angka presentase kematian akibat COVID-19 di Indonesia.
 
+```
+SELECT location, date, population, total_cases, total_deaths, (total_deaths/total_cases)*100 AS PresentaseKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE location = 'Indonesia'
+ORDER BY 1, 2
+```
+
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134761677-569778e0-a9fd-4631-9701-8f58e98595e1.png>
 
 Hal yang dapat kita ketahui bahwa angka presentase kematian di Indonesia tidak ada yang melampaui angka 10 persen. Untuk presentase kematian terbesar berada di sekitar angka 9 persen.
@@ -125,6 +132,13 @@ ORDER BY PresentaseKematian DESC
 Namun angka presentase tersebut tidak dapat selalu menjadi acuan, untuk angka presentase kematian yang besar cenderung ada di bulan-bulan awal karena angka total_cases dengan total_deaths belum memiliki perbandingan jauh sehingga pada bulan-bulan awal presentase kematian cenderung besar seperti terlihat pada hasil query di atas.
 
 Kita juga dapat melihat presentase kematian akibat COVID-19 pada akhir tahun 2020 di Indonesia.
+
+```
+SELECT location, date, population, total_cases, total_deaths, (total_deaths/total_cases)*100 AS PresentaseKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE location = 'Indonesia' AND date >= '2020-12-15 00:00:00.000'
+ORDER BY 1, 2
+```
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134762922-f6bad456-f8c8-4daf-90ae-693979641457.png>
 
