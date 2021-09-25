@@ -113,6 +113,13 @@ Dataset yang kita eksplor mencatat bahwa di Indonesia, pandemi baru menimbulkan 
 
 Hal yang dapat kita ketahui bahwa angka presentase kematian di Indonesia tidak ada yang melampaui angka 10 persen. Untuk presentase kematian terbesar berada di sekitar angka 9 persen.
 
+```
+SELECT location, date, population, total_cases, total_deaths, (total_deaths/total_cases)*100 AS PresentaseKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE location = 'Indonesia'
+ORDER BY PresentaseKematian DESC
+```
+
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134763239-bfc9cff4-b3e2-4d82-ae47-c57d4e468a55.png>
 
 Namun angka presentase tersebut tidak dapat selalu menjadi acuan, untuk angka presentase kematian yang besar cenderung ada di bulan-bulan awal karena angka total_cases dengan total_deaths belum memiliki perbandingan jauh sehingga pada bulan-bulan awal presentase kematian cenderung besar seperti terlihat pada hasil query di atas.
@@ -120,3 +127,28 @@ Namun angka presentase tersebut tidak dapat selalu menjadi acuan, untuk angka pr
 Kita juga dapat melihat presentase kematian akibat COVID-19 pada akhir tahun 2020 di Indonesia.
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134762922-f6bad456-f8c8-4daf-90ae-693979641457.png>
+
+Selain melihat angka dan presentase yang berkaitan dengan kematian, kita akan melihat angka total_cases per populasi untuk melihat seberapa persen orang-orang yang terinfeksi berdasarkan populasi lokasi terkait.
+
+```
+SELECT location, date, population, total_cases, (total_cases/population)*100 AS PresentaseTerinfeksi
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE location = 'Indonesia'
+ORDER BY 1, 2
+```
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134763552-82d668a8-a928-4940-a1a0-6db776246e5c.png>
+
+Jika kita lihat presentase pada akhir tahun 2020.
+
+```
+SELECT location, date, population, total_cases, (total_cases/population)*100 AS PresentaseTerinfeksi
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE location = 'Indonesia' AND DATE >= '2020-12-15 00:00:00.000'
+ORDER BY 1, 2
+```
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134763646-9f2d5b1a-7575-431f-9e6b-4e88bd6a3d93.png>
+
+
+
