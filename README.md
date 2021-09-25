@@ -90,21 +90,21 @@ Dalam sekilas data yang kita lihat, untuk field total_deaths berisi NULL karena 
 ```
 SELECT Location, date, total_cases, new_cases, total_deaths, population
 FROM PortfolioProject.dbo.CovidDeaths
-WHERE total_deaths != 'NULL'
+WHERE total_deaths IS NOT NULL
 ORDER BY 1, 2
 ```
 
-<img width=500 src=https://user-images.githubusercontent.com/74480780/134502883-df2c0b05-4808-439b-b509-3301fd6ce6b1.png>
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134760745-5372779d-382c-4722-8660-43ddd4a80d22.png>
 
 Angka kematian akan muncul beberapa waktu setelah pandemi menyebar dalam suatu lokasi. Untuk Afghanistan misalnya, angka kematian baru muncul pada 23 Maret 2020. Tentu penyebaran pandemi COVID-19 dan dampak kematiannya akan berbeda pada setiap lokasi/negara, hal ini valid jika kita eksplor data dengan nama lokasi yang berbeda, Contohnya Indonesia.
 
 ```
 SELECT Location, date, total_cases, new_cases, total_deaths, population
 FROM PortfolioProject.dbo.CovidDeaths
-WHERE Location = 'Indonesia' AND total_deaths != 'NULL'
+WHERE Location = 'Indonesia' AND total_deaths IS NOT NULL
 ORDER BY 1, 2
 ```
 
-<img width=500 src=https://user-images.githubusercontent.com/74480780/134503504-0e2442d2-24a2-49a1-ac71-c99900531bc5.png>
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134760770-5920189a-d737-4493-ba47-447dd3509960.png>
 
 Dataset yang kita eksplor mencatat bahwa di Indonesia, pandemi baru menimbulkan kematian dimulai pada 11 Maret 2020.
