@@ -154,7 +154,17 @@ ORDER BY TotalAngkaKematian DESC
 
 <img width=720 src=https://user-images.githubusercontent.com/74480780/134777519-de94f2e1-8d6b-49c9-8722-2f5760fd4a91.png>
 
-Seperti yang terlihat pada hasil query di atas, Indonesia menempati peringkat ke 7 dengan total angka kematian sebesar 140.634 (per tanggal 22 September 2021).
+Seperti yang terlihat pada hasil query di atas, Indonesia menempati peringkat ke 7 dengan total angka kematian sebesar 140.634 (per tanggal 22 September 2021). Jika kita tarik lebih luas, kita dapat melihat benua mana saja yang memiliki total angka kematian terbanyak.
+
+```
+SELECT continent, MAX(CAST(total_deaths AS INT)) AS TotalAngkaKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE continent IS NOT NULL
+GROUP BY continent 
+ORDER BY TotalAngkaKematian DESC
+```
+
+<img width=720 src=https://user-images.githubusercontent.com/74480780/134777747-91026afe-3fce-4f6a-a9bd-0a2b61e3adfa.png>
 
 Selain melihat angka dan presentase yang berkaitan dengan kematian, kita akan melihat angka total_cases per populasi untuk melihat seberapa persen orang-orang yang terinfeksi berdasarkan populasi lokasi terkait.
 
@@ -205,3 +215,22 @@ ORDER BY PresentasePopulasiTerinfeksi DESC
 Untuk Indonesia sendiri menempati urutan ke 121 dengan angka presentase terinfeksi sekitar 1,517 persen
 
 <img width=720 src=https://user-images.githubusercontent.com/74480780/134764527-99e6c5a7-285a-4e03-a11d-da287b0ac619.png>
+
+**Mari kita eksplor data berdasarkan rentang waktu/tanggal**
+
+```
+SELECT date, SUM(new_cases), SUM(CAST(new_deaths AS INT)), 
+ SUM(CAST(new_deaths AS INT))/SUM(new_cases)*100 AS PresentaseKematian
+FROM PortfolioProject.dbo.CovidDeaths
+WHERE continent IS NOT NULL
+GROUP BY date
+ORDER BY 1, 2
+```
+
+<img width=720 src=https://user-images.githubusercontent.com/74480780/134778353-96737887-03a1-41c8-a9d5-041f7df2f17d.png>
+
+Hasil query di atas menunjukkan jumlah setiap angka kasus baru, angka kematian baru, dan presentase kematian per hari dari seluruh dunia. Tentu akan banyak NULL pada awal bulan, seperti yang sudah dibahas sebelumnya. Tetapi saat kita scroll ke bawah di tanggal tertentu data point sudah tidak NULL lagi.
+
+<img width=720 src=https://user-images.githubusercontent.com/74480780/134778365-5872dcb8-a91c-4522-b270-b2f32fa62d68.png>
+
+Setiap kasus di seluruh dunia dikelompokkan dan dijumlahkan berdasarkan tanggal, sampai rentang tanggal 20 September 2021.
