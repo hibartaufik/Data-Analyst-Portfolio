@@ -111,3 +111,6 @@ Dataset yang kita eksplor mencatat bahwa di Indonesia, pandemi baru menimbulkan 
 
 <img width=500 src=https://user-images.githubusercontent.com/74480780/134761677-569778e0-a9fd-4631-9701-8f58e98595e1.png>
 
+Kita juga dapat melihat presentase kematian akibat COVID-19 pada akhir tahun 2020 di Indonesia.
+
+<img width=500 src=https://user-images.githubusercontent.com/74480780/134762922-f6bad456-f8c8-4daf-90ae-693979641457.png>
