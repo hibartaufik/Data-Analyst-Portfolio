@@ -9,6 +9,12 @@ Eksplorasi data menggunakan query SQL melalui Microsoft SQL Server Management St
 - Presentase orang terinfeksi COVID-19
 - Eksplorasi data berdasarkan rentang waktu
 - Angka Vaksinasi
-## 2. Tableau Visualization
+## [2. Tableau Visualization](https://github.com/hibartaufik/tableau-visualization)
+Visualisasi data dan menyusun Dashboard menggunakan Tableau. Membuat visualisasi yang menampilkan:
+- Visualisasi total angka keseluruhan kasus COVID-19 di dunia
+- Visualisasi total angka kematian di tiap benua
+- Visualisasi presentase terinfeksi setiap negara
+- Visualisasi time-series presentase terinfeksi di tiap negara
+- Dashboarding
 ## 3. SQL Data Cleansing
 ## 4. Python Analysing
