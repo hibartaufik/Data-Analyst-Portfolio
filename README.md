@@ -7,7 +7,12 @@ Menganalisa COVID-19 Cases menggunakan COVID-19 dataset dari [Our World in Data]
 - Python Analysing
 
 ## [SQL Data Exploration](https://github.com/hibartaufik/sql-data-exploration)
-Eksplorasi data menggunakan query SQL
+Eksplorasi data menggunakan query SQL melalui Microsoft SQL Server Management Studio 18. Eksplorasi data dilakukan untuk melihat beberapa insight berupa:
+- Tanggal awal mula COVID-19 menimbulkan kematian
+- Presentase kematian akibat COVID-19
+- Presentase orang terinfeksi COVID-19
+- Eksplorasi data berdasarkan rentang waktu
+- Angka Vaksinasi
 ## Tableau Visualization
 ## SQL Data Cleansing
 ## Python Analysing
