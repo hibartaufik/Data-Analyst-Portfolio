@@ -6,7 +6,8 @@ Menganalisa COVID-19 Cases menggunakan COVID-19 dataset dari [Our World in Data]
 - SQL Data Cleansing
 - Python Analysing
 
-## SQL Data Exploration
+## [SQL Data Exploration](https://github.com/hibartaufik/sql-data-exploration)
+Eksplorasi data menggunakan query SQL
 ## Tableau Visualization
 ## SQL Data Cleansing
 ## Python Analysing
