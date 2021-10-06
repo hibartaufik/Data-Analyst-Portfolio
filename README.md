@@ -15,6 +15,4 @@ Visualisasi data dan menyusun Dashboard menggunakan Tableau. Membuat visualisasi
 - Visualisasi total angka kematian di tiap benua
 - Visualisasi presentase terinfeksi setiap negara
 - Visualisasi time-series presentase terinfeksi di tiap negara
-- Dashboarding
-## 3. SQL Data Cleansing
-## 4. Python Analysing
+- Membuat Covid Dashboard
