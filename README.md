@@ -1,5 +1,7 @@
 # Data Analyst Portfolio
 
+![image](https://user-images.githubusercontent.com/74480780/136298159-147b211c-c2a3-4161-b889-d0dee659cf5b.png)
+
 Menganalisa COVID-19 Cases menggunakan COVID-19 dataset dari [Our World in Data](https://ourworldindata.org/) dengan rentang waktu 28 Januari 2020 - 20 September 2021. Dataset dapat diakses [disini](https://ourworldindata.org/covid-deaths). Tahapan analisa terbagi menjadi SQL Data Exploration, Tableau Visualization, SQL Data Cleansing, dan Python Analysing.
 
 ## [1. SQL Data Exploration](https://github.com/hibartaufik/sql-data-exploration)
