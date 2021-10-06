@@ -1,4 +1,4 @@
-# Data Analyst Portfolio
+# Data Analytics Portfolio
 
 ![image](https://user-images.githubusercontent.com/74480780/136298159-147b211c-c2a3-4161-b889-d0dee659cf5b.png)
 
